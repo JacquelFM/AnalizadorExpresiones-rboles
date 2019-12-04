@@ -21,6 +21,9 @@ class Main {
             // this._lista.mostrarNodos();
 
             this._lista.arbol();
+            this._lista.preOrder(6, null);
+            this._lista.inOrder(6, null);
+            this._lista.postOrder(6, null);
 
         });
     }

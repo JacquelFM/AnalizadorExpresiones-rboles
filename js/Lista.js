@@ -63,5 +63,48 @@ export default class Lista {
 
     }
 
+    inOrder(nodo, sentencia) {
+        console.log("indOrder");
+
+        if (nodo.hizq != null) {
+            this.inOrder(nodo.hizq, sentencia)
+        }
+
+        sentencia += nodo.valor + ", ";
+
+        if (nodo.hder != null) {
+            this.inOrder(nodo.hder, sentencia)
+        }
+
+    }
+
+    preOrder(nodo, sentencia) {
+        console.log("preOrder");
+
+        sentencia += nodo.valor + ", ";
+
+        if (nodo.hizq != null) {
+            this.preOrder(nodo.hizq, sentencia);
+        }
+
+        if (nodo.hder != null) {
+            this.preorder(nodo.hder, sentencia);
+        }
+    }
+
+    postOrder(nodo, sentencia) {
+        console.log("postOrder");
+
+        if (nodo.hizq != null) {
+            this.postOrder(nodo.hizq, sentencia)
+        }
+
+        if (nodo.hder != null) {
+            this.postOrder(valor.hizq, sentencia)
+        }
+
+        sentencia += nodo.valor + " ";
+    }
+
 
 }
